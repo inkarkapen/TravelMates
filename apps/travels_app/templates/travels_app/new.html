@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <a href = '/travels/logout'>Logout</a>
+    <h1>Create a new trip</h1>
+    <form action="/travels/create" method = "post">
+        {% csrf_token %}
+        Destination:<br>
+        <input type="text" name="destination"></br>
+        Description:<br>
+        <input type="text" name="desc"></br>
+        Start Date:<br>
+        <input type="date" name="start_date"></br>
+        End Date:<br>
+        <input type="date" name="end_date"></br>
+        <input type="submit" value="Submit">
+    </form>
+    <a href = '/travels'>GO BACK</a>
+</body>
+</html>

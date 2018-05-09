@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>The trip</title>
+    </head>
+    <body>
+        <a href = '/travels/logout'>Logout</a>
+        <h2>{{trip.destination}}</h2>
+        <h4>Planned By: {{trip.traveler.name}}</h4>
+        <h4>Description: {{trip.desc}}</h4>
+        <h4>Travel Date: {{trip.start_date}}</h4>
+        <h4>Travel Date To: {{trip.end_date}}</h4>
+        <h2>Other users' joining the trip:</h2>
+        {% for user in trips %}
+        <p>{{user.name}}</p>
+        {%endfor%}
+        <a href = '/travels'>GO BACK</a>
+    </body>
+</html>
